@@ -8,41 +8,96 @@
     <style>
         body {
             background-color: #ffc0cb; /* Light pink background */
-            color: #fff; /* White text color */
-            font-family: 'Arial', sans-serif; /* Stylish font-family */
-            text-align: center; /* Centering text */
-            padding: 50px; /* Padding around the content */
-            margin: 0; /* Remove default margin */
-            height: 100vh; /* Full viewport height */
-            display: flex; /* Flexbox for centering */
-            flex-direction: column; /* Stack elements vertically */
-            justify-content: center; /* Center vertically */
-            align-items: center; /* Center horizontally */
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            overflow: hidden;
+            height: 100vh;
+            margin: 0;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        img {
+            max-width: 10%;
+            height: auto;
+            margin: 0 15px;
         }
         h1 {
-            font-size: 48px; /* Large font size for the heading */
-            margin-bottom: 100px; /* Space below the heading */
+            font-size: 48px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            font-size: 36px;
+            margin-bottom: 50px;
         }
         p {
-            font-size: 24px; /* Larger font size for the paragraph */
+            font-size: 24px;
         }
         a {
-            color: #fff; /* White color for the link */
-            background-color: #e7428f; /* Darker pink for the button */
-            padding: 10px 20px; /* Padding inside the link to make it look like a button */
-            text-decoration: none; /* Remove underline from the link */
-            border-radius: 5px; /* Rounded corners for the button */
-            font-weight: bold; /* Bold font for the button */
-            transition: background-color 0.3s; /* Smooth transition for hover effect */
+            color: #fff;
+            background-color: #e7428f;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
         }
         a:hover {
-            background-color: #c13584; /* Darker pink on hover */
+            background-color: #c13584;
         }
+        .heart {
+            position: absolute;
+            color: #e7428f;
+            font-size: calc(10px + 2vmin); /* Responsive size */
+            animation: fall linear infinite;
+            opacity: 0; /* Start fully transparent */
+        }
+        @keyframes fall {
+            0% {
+                top: -10%;
+                opacity: 1;
+                transform: translateX(0) scale(0.5);
+            }
+            100% {
+                top: 110%;
+                opacity: 0;
+                transform: translateX(50px) scale(1.5);
+            }
+        }
+        /* Generate multiple hearts with various delays and starting positions */
+        /* This JavaScript will be run immediately and append hearts to the body */
     </style>
 </head>
 <body>
-    <h1> <i class="fas fa-heart"> </i>  Happy Birthday Babi  <i class="fas fa-heart"> </i></h1>
+    <div class="image-container">
+        <img src="trang.jpg" alt="Happy Birthday Image1">
+        <img src="trang2.jpg" alt="Happy Birthday Image2">
+        <img src="trang3.jpg" alt="Happy Birthday Image3">
+    </div>
+    <h1> <i class="fa-solid fa-cake-candles"></i> <i class="fas fa-heart"></i> Happy Birthday Babi <i class="fas fa-heart"></i> <i class="fa-solid fa-cake-candles"></i></h1>
+    <h2> 04/05/2024</h2>
     <p>Wishing you all the happiness and joy on your special day!</p>
+    <script>
+        for (let i = 0; i < 50; i++) { // Create 50 hearts
+            const heart = document.createElement('i');
+            heart.className = 'fas fa-heart heart';
+            heart.style.left = `${Math.random() * 100}%`;
+            heart.style.animationDuration = `${Math.random() * 5 + 5}s`; // Duration between 5 to 10 seconds
+            heart.style.animationDelay = `${Math.random() * -5}s`; // Staggered start times
+            document.body.appendChild(heart);
+        }
+    </script>
 </body>
 </html>
+
+
 

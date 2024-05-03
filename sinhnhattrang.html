@@ -34,15 +34,38 @@
         }
         h1 {
             font-size: 48px;
-            margin-bottom: 30px;
+            margin-bottom: 1px;
         }
         h2 {
             font-size: 36px;
-            margin-bottom: 50px;
+            margin-bottom: 1px;
         }
         p {
             font-size: 28px;
-            margin-bottom: 5px;
+            margin-bottom: 1px;
+        }
+        .message-container {
+            text-align: center;
+            margin: 2px 0;
+        }
+        .video-container {
+            position: absolute;
+            top: 50%;
+            right: 20%;
+            transform: translateY(-70%);
+            width: 5%;
+        }
+        .restaurant-container {
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            transform: translateY(-70%);
+            width: 20%; /* Consistency in width */
+            height: fit-content;
+            background-color: rgba(226, 127, 186, 0.8); /* Stylish background */
+            padding: 10px; /* Added padding for better layout */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Shadow for depth */
         }
         a {
             color: #fff;
@@ -85,10 +108,25 @@
         <img src="trang2.jpg" alt="Happy Birthday Image2">
         <img src="trang3.jpg" alt="Happy Birthday Image3">
     </div>
-    <h1> <i class="fa-solid fa-cake-candles"></i> <i class="fas fa-heart"></i> Happy Birthday Babi <i class="fas fa-heart"></i> <i class="fa-solid fa-cake-candles"></i></h1>
-    <h2> 04/05/2024</h2>
-    <p> Hi em, hôm nay là sinh nhật em nè <i class="fas fa-heart"></i> </p>
-    <p> Chúc em tuổi mới ngày càng xinh đẹp, luôn vui vẻ và hạnh phúc nhé ^^</p>
+    <div class="message-container">
+        <h1> <i class="fa-solid fa-cake-candles"></i> <i class="fas fa-heart"></i> Happy Birthday Babi <i class="fas fa-heart"></i> <i class="fa-solid fa-cake-candles"></i></h1>
+        <h2> 04/05/2024</h2>
+        <p> Hi em, hôm nay là sinh nhật em nè <i class="fas fa-heart"></i> </p>
+        <p> Chúc em tuổi mới ngày càng xinh đẹp, luôn vui vẻ và hạnh phúc nhé ^^</p>
+        <p> Anh mong em sẽ ngày càng hoàn thiện bản thân hơn, sống hạnh phúc hơn và sẽ luôn tích cực trong cuộc sống </p>
+        <p> Đây cũng là lần đầu tiên anh được đón sinh nhật cùng em, nên anh mong tụi mình sẽ có một ngày sinh nhật tràn đầy niềm vui</p>
+    </div>
+    <div class="video-container">
+        <video
+            src="sinhnhatem.mp4" width="300px" autoplay loop type="video/mp4">
+        </video>
+    </div>
+    <div class="restaurant-container">
+        <p> Thư mời vợ iu đi ăn tiệc sinh nhật</p>
+        <p> Thời gian: 19:00 04/05/2024</p>
+        <p> Địa điểm: Bí mật </p>
+        <p> Sự có mặt của em là niềm hạnh phúc của anh <i class="fas fa-heart"></i> </p>
+    </div>
 
 
     <script>
